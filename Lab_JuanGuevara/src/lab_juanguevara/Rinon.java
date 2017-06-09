@@ -24,5 +24,8 @@ public class Rinon extends Organo{
     public int getEfectividad() {
         return efectividad;
     }
-    
+    @Override
+    public String toString() {
+        return super.toString()+"Pulmon";
+    }
 }

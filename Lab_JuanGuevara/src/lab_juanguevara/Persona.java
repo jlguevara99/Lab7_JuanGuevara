@@ -5,17 +5,21 @@
  */
 package lab_juanguevara;
 
+import java.io.Serializable;
+
 /**
  *
  * @author HP
  */
-public class Persona {
-private String nombre;
-private int edad;
-private int id;
-private double altura;
-private double peso;
-private String sexo;
+public class Persona implements Serializable {
+
+    private static final long SerialVersionUID = 777L;
+    private String nombre;
+    private int edad;
+    private int id;
+    private double altura;
+    private double peso;
+    private String sexo;
 
     public Persona() {
     }
@@ -77,5 +81,9 @@ private String sexo;
         this.sexo = sexo;
     }
 
-    
+    @Override
+    public String toString() {
+        return nombre;
+    }
+
 }

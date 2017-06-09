@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author HP
  */
-public class Paciente {
+public class Paciente extends Persona{
     private ArrayList<String> enfermedad = new ArrayList();
     private Date fecha = new Date();
     private Date alta;
@@ -24,11 +24,14 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(Date alta, String tipo_S, String causa) {
+    public Paciente(Date alta, String tipo_S, String causa, String nombre, int edad, int id, double altura, double peso, String sexo) {
+        super(nombre, edad, id, altura, peso, sexo);
         this.alta = alta;
         this.tipo_S = tipo_S;
         this.causa = causa;
     }
+
+    
 
     public ArrayList<String> getEnfermedad() {
         return enfermedad;

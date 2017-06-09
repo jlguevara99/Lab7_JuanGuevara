@@ -17,12 +17,15 @@ public class Pancreas extends Organo{
     public Pancreas() {
     }
 
-    public Pancreas(Color color, int potenciado, int prueba) {
+    public Pancreas(String color, int potenciado, int prueba) {
         super(color, potenciado, prueba);
     }
 
     public int getEfectividad() {
         return efectividad;
     }
-    
+    @Override
+    public String toString() {
+        return super.toString()+"Pancreas";
+    }
 }

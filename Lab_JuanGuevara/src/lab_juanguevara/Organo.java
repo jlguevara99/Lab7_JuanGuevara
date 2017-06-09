@@ -6,14 +6,15 @@
 package lab_juanguevara;
 
 import java.awt.Color;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author HP
  */
-public class Organo {
-
+public class Organo implements Serializable{
+private static final long SerialVersionUID = 777L;
     private String color;
     private ArrayList<String> caracteristicas = new ArrayList();
 
@@ -59,6 +60,11 @@ public class Organo {
 
     public void setPrueba(int prueba) {
         this.prueba = prueba;
+    }
+
+    @Override
+    public String toString() {
+        return color+" ";
     }
 
 }

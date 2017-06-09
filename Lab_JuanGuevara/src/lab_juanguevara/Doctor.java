@@ -21,10 +21,13 @@ public class Doctor extends Persona{
     public Doctor() {
     }
 
-    public Doctor(int años, String hora) {
+    public Doctor(int años, String hora, String nombre, int edad, int id, double altura, double peso, String sexo) {
+        super(nombre, edad, id, altura, peso, sexo);
         this.años = años;
         this.hora = hora;
     }
+
+   
 
     public ArrayList<String> getEspecialidades() {
         return especialidades;
