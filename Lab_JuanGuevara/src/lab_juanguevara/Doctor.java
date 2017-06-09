@@ -68,5 +68,10 @@ public class Doctor extends Persona{
     public void setDias(ArrayList<String> dias) {
         this.dias = dias;
     }
+
+    @Override
+    public String toString() {
+        return "Dr."+super.toString();
+    }
    
 }
