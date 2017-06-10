@@ -125,8 +125,16 @@ public class Clinica extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         sex = new javax.swing.ButtonGroup();
         org = new javax.swing.ButtonGroup();
+        Hilo = new javax.swing.JDialog();
+        pg = new javax.swing.JProgressBar();
+        jButton13 = new javax.swing.JButton();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        p1 = new javax.swing.JList<>();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        d1 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
 
         jLabel2.setText("Nombre");
 
@@ -720,6 +728,49 @@ public class Clinica extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
+        jButton13.setText("Evaluar");
+
+        p1.setModel(new DefaultListModel());
+        jScrollPane7.setViewportView(p1);
+
+        d1.setModel(new DefaultListModel()
+        );
+        jScrollPane8.setViewportView(d1);
+
+        javax.swing.GroupLayout HiloLayout = new javax.swing.GroupLayout(Hilo.getContentPane());
+        Hilo.getContentPane().setLayout(HiloLayout);
+        HiloLayout.setHorizontalGroup(
+            HiloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HiloLayout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
+            .addGroup(HiloLayout.createSequentialGroup()
+                .addGroup(HiloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HiloLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(pg, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(HiloLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jButton13)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        HiloLayout.setVerticalGroup(
+            HiloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HiloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(HiloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(pg, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton13)
+                .addGap(50, 50, 50))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -737,27 +788,40 @@ public class Clinica extends javax.swing.JFrame {
             }
         });
 
+        jButton12.setText("Evaluacion");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jButton1)))
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addGap(171, 171, 171)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(63, 63, 63)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(235, Short.MAX_VALUE))
         );
 
@@ -829,6 +893,7 @@ public class Clinica extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Organo ingresado");
             organos.setModel(m);
             orga.setModel(m);
+            
             ap.escribirArchivo();
             ocolor.setText("");
             opot.setText("");
@@ -901,6 +966,8 @@ public class Clinica extends javax.swing.JFrame {
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         // TODO add your handling code here:
+        ap.cargarArchivo();
+        DefaultListModel r = (DefaultListModel)d1.getModel();
         try {
            DefaultTreeModel m = (DefaultTreeModel)arbol.getModel();
            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode)m.getRoot();
@@ -932,8 +999,14 @@ public class Clinica extends javax.swing.JFrame {
             }
             String ss = "s";
             
+            
             Doctor d = new Doctor(Integer.parseInt(ani.getText()),hora.getText(),dnombre.getText(),Integer.parseInt(dedad.getText()),Integer.parseInt(did.getText()),Double.parseDouble(dalt.getText()),Double.parseDouble(dpeso.getText()),sexop);
+            d.setDias(dias);
+            r.addElement(d);
+            d1.setModel(r);
+            
            doc = new DefaultMutableTreeNode(d);
+           ap.setObject(d);
            try {
                 while (ss.equals("s")) {                    
                     int pos = Integer.parseInt(JOptionPane.showInputDialog(this,"Ingrese posicion del paciente que quiere ingresar"));
@@ -950,13 +1023,14 @@ public class Clinica extends javax.swing.JFrame {
            raiz.add(doc);
            m.reload();
            
-           
+           ap.escribirArchivo();
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
         // TODO add your handling code here:
+        
         ap.cargarArchivo();
         DefaultListModel m = (DefaultListModel)pacientes.getModel();
         String s = "s";
@@ -981,6 +1055,7 @@ public class Clinica extends javax.swing.JFrame {
             Paciente p = new Paciente(cfecha.getDate(),csangre.getText(),ccausa.getText(),cnombre.getText(),Integer.parseInt(cedad.getText()),Integer.parseInt(cid.getText()),Double.parseDouble(calt.getText()),Double.parseDouble(cpeso.getText()),soo);
             m.addElement(p);
             ap.setObject(p);
+            p1.setModel(m);
             pac.add(p);
             pac2.setModel(m);
             ap.escribirArchivo();
@@ -1086,12 +1161,23 @@ public class Clinica extends javax.swing.JFrame {
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
         // TODO add your handling code here:
         DefaultListModel m = (DefaultListModel)pacientes.getModel();
-        if (pacientes.getSelectedIndex()>=0) {
-            ((Paciente)m.get(pacientes.getSelectedIndex())).getOrganos().add(((Organo)m.get(pacientes.getSelectedIndex())));
+        DefaultListModel c = (DefaultListModel)orga.getModel();
+        if (pacientes.getSelectedIndex()>=0 && orga.getSelectedIndex()>=0) {
+            ((Paciente)m.get(pacientes.getSelectedIndex())).getOrganos().add(((Organo)c.get(orga.getSelectedIndex())));
+             JOptionPane.showMessageDialog(this, "Organo agregado");
         }else{
             JOptionPane.showMessageDialog(this, "No ha seleccionado organos o pacientes");
         }
     }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        // TODO add your handling code here:
+        Hilo.setModal(true);
+        Hilo.pack();
+        Hilo.setLocationRelativeTo(this);
+        Hilo.setVisible(true);
+        
+    }//GEN-LAST:event_jButton12MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1134,6 +1220,7 @@ public class Clinica extends javax.swing.JFrame {
     private javax.swing.JRadioButton Co;
     private javax.swing.JRadioButton E;
     private javax.swing.JRadioButton H;
+    private javax.swing.JDialog Hilo;
     private javax.swing.JRadioButton Pa;
     private javax.swing.JRadioButton Pu;
     private javax.swing.JRadioButton R;
@@ -1147,6 +1234,7 @@ public class Clinica extends javax.swing.JFrame {
     private javax.swing.JTextField cnombre;
     private javax.swing.JTextField cpeso;
     private javax.swing.JTextField csangre;
+    private javax.swing.JList<String> d1;
     private javax.swing.JTextField dalt;
     private javax.swing.JTextField dedad;
     private javax.swing.JRadioButton df;
@@ -1159,6 +1247,8 @@ public class Clinica extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1204,6 +1294,8 @@ public class Clinica extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JRadioButton ju;
     private javax.swing.JRadioButton lu;
@@ -1216,8 +1308,10 @@ public class Clinica extends javax.swing.JFrame {
     private javax.swing.ButtonGroup org;
     private javax.swing.JList<String> orga;
     private javax.swing.JList<String> organos;
+    private javax.swing.JList<String> p1;
     private javax.swing.JList<String> pac2;
     private javax.swing.JList<String> pacientes;
+    private javax.swing.JProgressBar pg;
     private javax.swing.ButtonGroup sex;
     private javax.swing.JRadioButton vi;
     // End of variables declaration//GEN-END:variables
